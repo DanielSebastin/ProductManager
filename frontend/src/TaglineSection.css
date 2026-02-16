@@ -1,0 +1,85 @@
+.tagline-card{
+  background:linear-gradient(135deg,#0a0a0a,#140007);
+  border:1px solid rgba(255,0,60,.35);
+  border-radius:16px;
+  box-shadow:0 0 18px rgba(255,0,60,.18);
+  padding:24px;
+  backdrop-filter:blur(8px);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Neon top glow line */
+.tagline-card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,#ff003c,#ff1744,#ff003c);
+  border-radius:16px 16px 0 0;
+  box-shadow:0 0 12px rgba(255,0,60,.7);
+}
+
+/* Title */
+.tagline-content h3{
+  margin:0 0 12px;
+  font-size:22px;
+  font-weight:700;
+  background:linear-gradient(135deg,#ff003c,#ff1744);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:.5px;
+}
+
+/* Subtitle */
+.tagline-content p{
+  margin:0 0 20px;
+  color:#b3b3b3;
+  font-size:15px;
+  line-height:1.6;
+  max-width:320px;
+  margin-left:auto;
+  margin-right:auto;
+  font-style:italic;
+}
+
+/* Badge */
+.company-badge{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:12px 20px;
+  background:rgba(20,0,7,.9);
+  border:1px solid rgba(255,0,60,.35);
+  border-radius:12px;
+  margin:0 auto;
+  max-width:fit-content;
+  box-shadow:0 0 10px rgba(255,0,60,.2);
+}
+
+/* Powered text */
+.powered-by{
+  font-size:12px;
+  color:#888;
+  font-weight:500;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+
+/* Company name neon */
+.company-name{
+  font-size:18px;
+  font-weight:800;
+  background:linear-gradient(135deg,#ff003c,#ff1744);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  text-shadow:0 0 8px rgba(255,0,60,.5);
+}
