@@ -1,30 +1,32 @@
 # 📦 Product Manager
 
-A simple and efficient **Product Management System** to create, manage, and organize products.  
+A simple and efficient **Product Management System** to create, manage, and organize products.
 Built using **Python, SQLAlchemy, and AWS RDS (PostgreSQL)**.
 
 ---
 
 ## 🚀 Features
 
-- ➕ Add new products  
-- 📋 View all products  
-- ✏️ Update product details  
-- ❌ Delete products  
-- ☁️ Cloud database with AWS RDS (PostgreSQL)  
-- ⚡ Fast ORM using SQLAlchemy  
-- 🔒 Secure SSL database connection  
+* Add new products
+* View all products
+* Update product details
+* Delete products
+* Cloud database with AWS RDS (PostgreSQL)
+* Fast ORM using SQLAlchemy
+* Secure SSL database connection
 
 ---
 
 ## 🛠️ Tech Stack
 
 **Backend**
-- Python
-- SQLAlchemy
+
+* Python
+* SQLAlchemy
 
 **Database**
-- AWS RDS (PostgreSQL)
+
+* AWS RDS (PostgreSQL)
 
 ---
 
@@ -38,49 +40,68 @@ db_url = "postgresql://username:password@rdsproj.cnwcewm0mb3c.ap-south-1.rds.ama
 
 engine = create_engine(db_url, pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-⚠️ Never expose real database credentials in public repositories. Use environment variables instead.
+```
 
-⚙️ Installation & Setup
-1. Clone the repository
-bash
-Copy code
+Never expose real database credentials in public repositories. Use environment variables instead.
+
+---
+
+## ⚙️ Installation & Setup
+
+### Clone the repository
+
+```bash
 git clone https://github.com/DanielSebastin/ProductManager.git
 cd ProductManager
-2. Create virtual environment
-bash
-Copy code
+```
+
+### Create virtual environment
+
+```bash
 python -m venv venv
-Activate (Windows)
+```
 
-bash
-Copy code
+**Activate (Windows)**
+
+```bash
 venv\Scripts\activate
-Activate (Linux / Mac)
+```
 
-bash
-Copy code
+**Activate (Linux / Mac)**
+
+```bash
 source venv/bin/activate
-3. Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-4. Configure Environment Variables
-Create a .env file:
+```
 
-env
-Copy code
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure Environment Variables
+
+Create a `.env` file:
+
+```env
 DB_USER=your_username
 DB_PASS=your_password
 DB_HOST=rdsproj.cnwcewm0mb3c.ap-south-1.rds.amazonaws.com
 DB_PORT=5432
 DB_NAME=postgres
-5. Run the project
-bash
-Copy code
+```
+
+### Run the project
+
+```bash
 python app.py
-📂 Project Structure
-text
-Copy code
+```
+
+---
+
+## 📂 Project Structure
+
+```text
 ProductManager/
 │── backend/
 │   ├── database.py
@@ -91,34 +112,27 @@ ProductManager/
 │── frontend/ (optional)
 │── requirements.txt
 │── README.md
-🔐 Security Notes
-SSL enabled (sslmode=require)
+```
 
-Do NOT commit .env
+---
 
-Restrict RDS Security Group to trusted IPs
+## 🔐 Security Notes
 
-Rotate DB credentials regularly
+* SSL enabled (`sslmode=require`)
+* Do NOT commit `.env`
+* Restrict RDS Security Group to trusted IPs
+* Rotate DB credentials regularly
 
-🎯 Purpose
-Learn AWS RDS (Cloud DB)
+---
 
-Practice SQLAlchemy ORM
+## 🎯 Purpose
 
-Build real-world CRUD system
+* Learn AWS RDS (Cloud DB)
+* Practice SQLAlchemy ORM
+* Build real-world CRUD system
 
-🔮 Future Improvements
-Authentication (Login / Signup)
+---
 
-Role-based access
+## 📜 License
 
-Product image upload
-
-REST API / FastAPI
-
-Docker deployment
-
-AWS EC2 hosting
-
-📜 License
 MIT License
